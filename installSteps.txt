@@ -1,0 +1,24 @@
+Steps to install Keras-retinanet (https://github.com/fizyr/keras-retinanet):
+
+1. upgrade tensorflow
+2. upgrade keras (from github source: python setup.py install)
+3. install keras-resnet (https://github.com/broadinstitute/keras-resnet)
+   - pip install --user --upgrade git+https://github.com/broadinstitute/keras-resnet
+4. install pycocotools.
+   - issue: MS VC compiler does not understand some compiler options from git. Thus I will clone the repository and fix it manually
+     - create new fork 
+	 - python setup.py install --user
+	 
+5. download latest coco model from https://delftrobotics-my.sharepoint.com/personal/h_gaiser_fizyr_com/_layouts/15/guestaccess.aspx?docid=0386bb358d0d44762a7c705cdac052c2f&authkey=AfdlNvj1hPD8ZPShcqUFUZg&expiration=2017-12-28T16%3A09%3A58.000Z&e=5585e7262ac64651bf59990b54b406cd
+
+6. Test installation by running notebook "examples/ResNet50RetinaNet - COCO 2017.ipynb"
+   - note that latest version of model (v1.2.2) failed to load because of 
+     - TypeError: Fetch argument None has invalid type <class 'NoneType'>
+     - filed bug report https://github.com/fizyr/keras-retinanet/issues/177
+
+
+
+
+
+
+
