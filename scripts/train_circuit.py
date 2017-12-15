@@ -109,8 +109,9 @@ def create_callbacks(model, training_model, prediction_model, validation_generat
     return callbacks
 
 def add_noise(inNumpy):
+    # TODO: need to debug. This is not being invoked!
     # May want to cap the data to within range
-    result = np.random.normal(inNumpy, loc=0.0, scale=0.2)
+    result = np.random.normal(inData, scale=0.5).astype(np.uint8)
     print("adding noise ---- from {}:{} to {}:{}".format(inNumpy.min(), inNumpy.max(), result.min(), result.max()))
     return result
 
@@ -257,7 +258,7 @@ if __name__ == '__main__':
     # start training
     training_model.fit_generator(
         generator=train_generator,
-        steps_per_epoch=100,       # was 10000
+        steps_per_epoch=10000,       # was 10000
         epochs=50,
         verbose=1,
         callbacks=callbacks,

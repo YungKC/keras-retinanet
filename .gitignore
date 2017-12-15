@@ -4,3 +4,4 @@ __pycache__/
 build/
 dist/
 keras_retinanet.egg-info/
+logs/
