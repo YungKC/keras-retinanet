@@ -1,0 +1,1 @@
+python3 scripts/train_circuit.py csv /media/kai/Data1/robotPrototype/data/MLRotation/annotation5.txt /media/kai/Data1/robotPrototype/data/MLRotation/classname5.txt
