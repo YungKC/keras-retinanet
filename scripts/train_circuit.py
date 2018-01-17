@@ -85,7 +85,7 @@ def create_callbacks(model, training_model, prediction_model, validation_generat
     checkpoint = keras.callbacks.ModelCheckpoint(
         os.path.join(
             snapshot_path,
-            'resnet50_{dataset_type}_{{epoch:02d}}.h5'.format(dataset_type=dataset_type)
+            'circuit_resnet50_{dataset_type}_{{epoch:02d}}.h5'.format(dataset_type=dataset_type)
         ),
         verbose=1
     )
