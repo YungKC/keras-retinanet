@@ -1,0 +1,1 @@
+python scripts/train_rfBoard.py csv /media/kai/Data1/robotPrototype/data/MLRotation/annotation180322CircuitBoardRF.txt /media/kai/Data1/robotPrototype/data/MLRotation/classname180322CircuitBoardRF.txt
